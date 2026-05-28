@@ -1,99 +1,161 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1 awi store links</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>The Artisan Print</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f8f8f8, #ffe6ea);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.container {
-    background: white;
-    padding: 30px;
-    max-width: 500px;
-    width: 90%;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    text-align: center;
+body{
+    font-family:'Poppins',sans-serif;
+    background:
+    radial-gradient(circle at top,#1a1a1a,#000);
+    color:white;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow-x:hidden;
+    padding:20px;
 }
 
-.logo {
-    width: 140px;
-    margin-bottom: 15px;
+.container{
+    width:100%;
+    max-width:480px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:30px;
+    padding:40px 30px;
+    text-align:center;
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.6);
+    animation:fadeIn 1s ease;
 }
 
-h1 {
-    color: #ff2b45;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.logo{
+    width:170px;
+    margin-bottom:20px;
+    filter:drop-shadow(0 0 10px rgba(255,255,255,0.1));
 }
 
-h2 {
-    color: #444;
-    margin-bottom: 25px;
-    font-size: 1.2rem;
+h1{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    line-height:1.1;
+    margin-bottom:10px;
+    letter-spacing:2px;
 }
 
-ul {
-    text-align: left;
-    padding-left: 25px;
-    color: #333;
-    margin-bottom: 30px;
-    line-height: 1.8;
+h2{
+    color:#cfcfcf;
+    font-weight:300;
+    font-size:1rem;
+    margin-bottom:30px;
 }
 
-.buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.services{
+    margin-bottom:30px;
 }
 
-.btn {
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 12px;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
+.services p{
+    margin:10px 0;
+    color:#ddd;
+    font-size:15px;
 }
 
-.facebook { background: #1877f2; }
-.whatsapp { background: #25d366; }
-.channel { background: #128c7e; }
-.instagram {
-    background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
 
-footer {
-    margin-top: 25px;
-    font-size: 14px;
-    color: #666;
+.btn{
+    text-decoration:none;
+    padding:16px;
+    border-radius:18px;
+    color:white;
+    font-weight:600;
+    transition:0.3s ease;
+    font-size:16px;
+    border:1px solid rgba(255,255,255,0.08);
 }
 
-/* Language Buttons */
-.lang-buttons {
-    margin-bottom: 15px;
+.btn:hover{
+    transform:translateY(-4px) scale(1.02);
+    opacity:0.95;
 }
 
-.lang-buttons button {
-    margin: 3px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    background: #ff2b45;
-    color: white;
-    font-weight: bold;
+.facebook{
+    background:#1877f2;
 }
+
+.whatsapp{
+    background:#25d366;
+}
+
+.channel{
+    background:#128c7e;
+}
+
+.instagram{
+    background:linear-gradient(
+    45deg,
+    #f58529,
+    #dd2a7b,
+    #8134af,
+    #515bd4);
+}
+
+.lang-buttons{
+    margin-bottom:25px;
+}
+
+.lang-buttons button{
+    background:rgba(255,255,255,0.08);
+    color:white;
+    border:none;
+    padding:10px 16px;
+    margin:4px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:600;
+}
+
+.lang-buttons button:hover{
+    background:white;
+    color:black;
+}
+
+footer{
+    margin-top:30px;
+    color:#888;
+    font-size:13px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 </style>
 </head>
 
@@ -101,111 +163,154 @@ footer {
 
 <div class="container">
 
-    <!-- Language Buttons -->
-    <div class="lang-buttons">
-        <button onclick="setLang('en')">English</button>
-        <button onclick="setLang('ar')">العربية</button>
-        <button onclick="setLang('fr')">Le français</button>
-    </div>
+<div class="lang-buttons">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('ar')">العربية</button>
+    <button onclick="setLang('fr')">Français</button>
+</div>
 
-    <img src="https://raw.githubusercontent.com/AbdallaBadreldin/one_awi_website/refs/heads/main/one_awi_logo.png" class="logo">
+<img
+src="https://raw.githubusercontent.com/AbdallaBadreldin/one_awi_website/refs/heads/main/one_awi_logo.png"
+class="logo"
+/>
 
-    <h1 id="title">1 Awi</h1>
-    <h2 id="subtitle">Your Custom Gift Destination 🎁</h2>
+<h1 id="title">THE ARTISAN PRINT</h1>
 
-    <ul>
-        <li id="item1">Create custom gifts</li>
-        <li id="item2">Print mugs</li>
-        <li id="item3">Print t-shirts</li>
-        <li id="item4">Print caps</li>
-        <li id="item5">And more... Contact us and pickup your special gift!</li>
-    </ul>
+<h2 id="subtitle">
+Luxury Custom Printing & Gifts
+</h2>
 
-    <div class="buttons">
-        <a href="https://www.facebook.com/profile.php?id=100068160655381" target="_blank" class="btn facebook" id="facebook">Facebook</a>
-        <a href="https://wa.me/201501166734" target="_blank" class="btn whatsapp" id="whatsapp">WhatsApp</a>
-        <a href="https://whatsapp.com/channel/0029VbCDtcMEQIaoIqpRVI3A" target="_blank" class="btn channel" id="channel">WhatsApp Channel</a>
-        <a href="https://www.instagram.com/1awi.customs/" target="_blank" class="btn instagram" id="instagram">Instagram</a>
-    </div>
+<div class="services">
+    <p id="item1">✨ Custom Gifts</p>
+    <p id="item2">☕ Premium Mug Printing</p>
+    <p id="item3">👕 T-Shirt Printing</p>
+    <p id="item4">🧢 Cap Printing</p>
+    <p id="item5">🎁 Your Idea, We Print It</p>
+</div>
 
-    <footer id="footer">
-        Made with ❤️ by 1 awi
-    </footer>
+<div class="buttons">
+
+<a href="https://www.facebook.com/profile.php?id=100068160655381"
+target="_blank"
+class="btn facebook"
+id="facebook">
+Facebook
+</a>
+
+<a href="https://wa.me/201501166734"
+target="_blank"
+class="btn whatsapp"
+id="whatsapp">
+WhatsApp
+</a>
+
+<a href="https://whatsapp.com/channel/0029VbCDtcMEQIaoIqpRVI3A"
+target="_blank"
+class="btn channel"
+id="channel">
+WhatsApp Channel
+</a>
+
+<a href="https://www.instagram.com/1awi.customs/"
+target="_blank"
+class="btn instagram"
+id="instagram">
+Instagram
+</a>
+
+</div>
+
+<footer id="footer">
+Made with ❤️ by The Artisan Print
+</footer>
 
 </div>
 
 <script>
+
 const langData = {
-    en: {
-        title: "1 Awi",
-  	subtitle: "Your Custom Gift Destination 🎁",
-        item1: "Create custom gifts",
-        item2: "Print mugs",
-        item3: "Print t-shirts",
-        item4: "Print caps",
-        item5: "And more... Contact us and pickup your special gift!",
-        facebook: "Facebook",
-        whatsapp: "WhatsApp",
-        channel: "WhatsApp Channel",
-        instagram: "Instagram",
-        footer: "Made with ❤️ by One Awi"
-    },
-    ar: {
-	title: "١ اوى",
-        subtitle: "وجهتك للهدايا المخصصة 🎁",
-        item1: "تصميم هدايا مخصصة",
-        item2: "طباعة مجات",
-        item3: "طباعة تيشيرتات",
-        item4: "طباعة كابات",
-        item5: "والمزيد... تواصل معنا واستلم هديتك!",
-        facebook: "فيسبوك",
-        whatsapp: "واتساب",
-        channel: "قناة واتساب",
-        instagram: "إنستجرام",
-        footer: "صُنع بـ ❤️ بواسطة واحد اوى"
-    },
-    fr: {
-        title: "1 Awi",
-	subtitle: "Votre destination de cadeaux personnalisés 🎁",
-        item1: "Créer des cadeaux personnalisés",
-        item2: "Impression sur mugs",
-        item3: "Impression sur t-shirts",
-        item4: "Impression sur casquettes",
-        item5: "Et plus... Contactez-nous et récupérez votre cadeau spécial !",
-        facebook: "Facebook",
-        whatsapp: "WhatsApp",
-        channel: "Chaîne WhatsApp",
-        instagram: "Instagram",
-        footer: "Fait avec ❤️ par un awi"
-    }
+
+en:{
+title:"THE ARTISAN PRINT",
+subtitle:"Luxury Custom Printing & Gifts",
+item1:"✨ Custom Gifts",
+item2:"☕ Premium Mug Printing",
+item3:"👕 T-Shirt Printing",
+item4:"🧢 Cap Printing",
+item5:"🎁 Your Idea, We Print It",
+facebook:"Facebook",
+whatsapp:"WhatsApp",
+channel:"WhatsApp Channel",
+instagram:"Instagram",
+footer:"Made with ❤️ by The Artisan Print"
+},
+
+ar:{
+title:"ذا أرتيزان برينت",
+subtitle:"طباعة وهدايا مخصصة فاخرة",
+item1:"✨ هدايا مخصصة",
+item2:"☕ طباعة مجات احترافية",
+item3:"👕 طباعة تيشيرتات",
+item4:"🧢 طباعة كابات",
+item5:"🎁 فكرتك... إحنا نطبعها",
+facebook:"فيسبوك",
+whatsapp:"واتساب",
+channel:"قناة واتساب",
+instagram:"إنستجرام",
+footer:"صُنع بـ ❤️ بواسطة The Artisan Print"
+},
+
+fr:{
+title:"THE ARTISAN PRINT",
+subtitle:"Impression & cadeaux personnalisés",
+item1:"✨ Cadeaux personnalisés",
+item2:"☕ Impression sur mugs",
+item3:"👕 Impression sur t-shirts",
+item4:"🧢 Impression sur casquettes",
+item5:"🎁 Votre idée... Nous l’imprimons",
+facebook:"Facebook",
+whatsapp:"WhatsApp",
+channel:"Chaîne WhatsApp",
+instagram:"Instagram",
+footer:"Créé avec ❤️ par The Artisan Print"
+}
+
 };
 
-function setLang(lang) {
-    localStorage.setItem("lang", lang);
+function setLang(lang){
 
-    document.getElementById("title").innerText = langData[lang].title;
-    document.getElementById("subtitle").innerText = langData[lang].subtitle;
-    document.getElementById("item1").innerText = langData[lang].item1;
-    document.getElementById("item2").innerText = langData[lang].item2;
-    document.getElementById("item3").innerText = langData[lang].item3;
-    document.getElementById("item4").innerText = langData[lang].item4;
-    document.getElementById("item5").innerText = langData[lang].item5;
+localStorage.setItem("lang",lang);
 
-    document.getElementById("facebook").innerText = langData[lang].facebook;
-    document.getElementById("whatsapp").innerText = langData[lang].whatsapp;
-    document.getElementById("channel").innerText = langData[lang].channel;
-    document.getElementById("instagram").innerText = langData[lang].instagram;
+document.getElementById("title").innerText = langData[lang].title;
+document.getElementById("subtitle").innerText = langData[lang].subtitle;
+document.getElementById("item1").innerText = langData[lang].item1;
+document.getElementById("item2").innerText = langData[lang].item2;
+document.getElementById("item3").innerText = langData[lang].item3;
+document.getElementById("item4").innerText = langData[lang].item4;
+document.getElementById("item5").innerText = langData[lang].item5;
 
-    document.getElementById("footer").innerText = langData[lang].footer;
+document.getElementById("facebook").innerText = langData[lang].facebook;
+document.getElementById("whatsapp").innerText = langData[lang].whatsapp;
+document.getElementById("channel").innerText = langData[lang].channel;
+document.getElementById("instagram").innerText = langData[lang].instagram;
 
-    document.body.dir = (lang === "ar") ? "rtl" : "ltr";
+document.getElementById("footer").innerText = langData[lang].footer;
+
+document.body.dir = (lang === "ar") ? "rtl" : "ltr";
+
 }
 
 window.onload = () => {
-    const saved = localStorage.getItem("lang") || "en";
-    setLang(saved);
+
+const saved =
+localStorage.getItem("lang") || "en";
+
+setLang(saved);
+
 };
+
 </script>
 
 </body>
 </html>
+```
