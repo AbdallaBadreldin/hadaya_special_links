@@ -3,207 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hadaya special links</title>
-
+<title>Hadaya Special</title>
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f8f8f8, #ffe6ea);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:Arial,sans-serif;
+    background:#f7f7f7;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
 }
-
-.container {
-    background: white;
-    padding: 30px;
-    max-width: 500px;
-    width: 90%;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    text-align: center;
+.container{
+    background:#fff;
+    width:100%;
+    max-width:520px;
+    padding:30px;
+    border-radius:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    text-align:center;
 }
-
-.logo {
-    width: 140px;
-    margin-bottom: 15px;
+.logo{
+    width:140px;
+    margin-bottom:15px;
 }
-
-h1 {
-    color: #ff2b45;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.lang-buttons button{
+    background:#8b5cf6;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:10px;
+    cursor:pointer;
+    margin:3px;
 }
-
-h2 {
-    color: #444;
-    margin-bottom: 25px;
-    font-size: 1.2rem;
+h1{color:#e11d48;margin:10px 0}
+h2{color:#555;font-size:18px;margin-bottom:20px}
+ul{text-align:left;line-height:1.9;color:#333;margin-bottom:20px;padding-left:22px}
+.google-play img{
+    width:240px;
+    max-width:100%;
+    transition:.25s;
 }
-
-ul {
-    text-align: left;
-    padding-left: 25px;
-    color: #333;
-    margin-bottom: 30px;
-    line-height: 1.8;
+.google-play img:hover{
+    transform:scale(1.05);
 }
-
-.buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:15px;
 }
-
-.btn {
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 12px;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
+.btn{
+    text-decoration:none;
+    color:white;
+    padding:14px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.25s;
 }
-
-.facebook { background: #1877f2; }
-.whatsapp { background: #25d366; }
-.channel { background: #128c7e; }
-.instagram {
-    background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+.btn:hover{
+    transform:translateY(-2px);
 }
-
-footer {
-    margin-top: 25px;
-    font-size: 14px;
-    color: #666;
+.facebook{background:#1877f2}
+.whatsapp{background:#25d366}
+.instagram{
+    background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
 }
-
-/* Language Buttons */
-.lang-buttons {
-    margin-bottom: 15px;
-}
-
-.lang-buttons button {
-    margin: 3px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    background: #ff2b45;
-    color: white;
-    font-weight: bold;
+footer{
+    margin-top:20px;
+    color:#666;
+    font-size:14px;
 }
 </style>
 </head>
-
 <body>
 
 <div class="container">
 
-    <!-- Language Buttons -->
-    <div class="lang-buttons">
-        <button onclick="setLang('en')">English</button>
-        <button onclick="setLang('ar')">العربية</button>
-        <button onclick="setLang('fr')">Le français</button>
-    </div>
+<div class="lang-buttons">
+<button onclick="setLang('en')">English</button>
+<button onclick="setLang('ar')">العربية</button>
+<button onclick="setLang('fr')">Français</button>
+</div>
 
-    <img src="https://raw.githubusercontent.com/AbdallaBadreldin/hadaya_special_links/refs/heads/main/hadaya_logo.png" class="logo">
+<img class="logo" src="https://raw.githubusercontent.com/AbdallaBadreldin/hadaya_special_links/refs/heads/main/hadaya_logo.png">
 
-    <h1 id="title">Hadaya special</h1>
-    <h2 id="subtitle">Your Custom Gift Destination 🎁</h2>
+<h1 id="title"></h1>
+<h2 id="subtitle"></h2>
 
-    <ul>
-        <li id="item1">Create custom gifts</li>
-        <li id="item2">Print mugs</li>
-        <li id="item3">Print t-shirts</li>
-        <li id="item4">Print caps</li>
-        <li id="item5">And more... Contact us and pickup your special gift!</li>
-    </ul>
+<div class="google-play">
+<a href="https://play.google.com/store/apps/details?id=client.fstech.hadaya" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+</a>
+</div>
 
-    <div class="buttons">
-        <a href="https://www.facebook.com/Hadaya.Special" target="_blank" class="btn facebook" id="facebook">Facebook</a>
-        <a href="https://wa.me/201501166734" target="_blank" class="btn whatsapp" id="whatsapp">WhatsApp</a>
-        <a href="https://www.instagram.com/hadaya.special" target="_blank" class="btn instagram" id="instagram">Instagram</a>
-    </div>
+<ul>
+<li id="item1"></li>
+<li id="item2"></li>
+<li id="item3"></li>
+<li id="item4"></li>
+<li id="item5"></li>
+</ul>
 
-    <footer id="footer">
-        Made with ❤️ by Hadaya special
-    </footer>
+<div class="buttons">
+<a href="https://www.facebook.com/Hadaya.Special" target="_blank" class="btn facebook" id="facebook"></a>
+<a href="https://wa.me/201501166734" target="_blank" class="btn whatsapp" id="whatsapp"></a>
+<a href="https://www.instagram.com/hadaya.special" target="_blank" class="btn instagram" id="instagram"></a>
+</div>
+
+<footer id="footer"></footer>
 
 </div>
 
 <script>
-const langData = {
-    en: {
-        title: "Hadaya special",
-  	subtitle: "Your Custom Gift Destination 🎁",
-        item1: "Create custom gifts",
-        item2: "Print mugs",
-        item3: "Print t-shirts",
-        item4: "Print caps",
-        item5: "And more... Contact us and pickup your special gift!",
-        facebook: "Facebook",
-        whatsapp: "WhatsApp",
-        channel: "WhatsApp Channel",
-        instagram: "Instagram",
-        footer: "Made with ❤️ by Hadaya special"
-    },
-    ar: {
-	title: "هدايا مميزة",
-        subtitle: "وجهتك للهدايا المخصصة 🎁",
-        item1: "تصميم هدايا مخصصة",
-        item2: "طباعة مجات",
-        item3: "طباعة تيشيرتات",
-        item4: "طباعة كابات",
-        item5: "والمزيد... تواصل معنا واستلم هديتك!",
-        facebook: "فيسبوك",
-        whatsapp: "واتساب",
-        channel: "قناة واتساب",
-        instagram: "إنستجرام",
-        footer: "صُنع بـ ❤️ بواسطة هدايا مميزة "
-    },
-    fr: {
-        title: "Hadaya special",
-	subtitle: "Votre destination de cadeaux personnalisés 🎁",
-        item1: "Créer des cadeaux personnalisés",
-        item2: "Impression sur mugs",
-        item3: "Impression sur t-shirts",
-        item4: "Impression sur casquettes",
-        item5: "Et plus... Contactez-nous et récupérez votre cadeau spécial !",
-        facebook: "Facebook",
-        whatsapp: "WhatsApp",
-        channel: "Chaîne WhatsApp",
-        instagram: "Instagram",
-        footer: "Fait avec ❤️ par un Hadaya speical"
-    }
+const langData={
+en:{
+title:"Hadaya Special",
+subtitle:"Your Custom Gift Destination 🎁",
+item1:"Create custom gifts",
+item2:"Print mugs",
+item3:"Print t-shirts",
+item4:"Print caps",
+item5:"And more... Contact us today!",
+facebook:"Facebook",
+whatsapp:"WhatsApp",
+instagram:"Instagram",
+footer:"Made with ❤️ by Hadaya Special"
+},
+ar:{
+title:"هدايا مميزة",
+subtitle:"وجهتك للهدايا المخصصة 🎁",
+item1:"تصميم هدايا مخصصة",
+item2:"طباعة مجات",
+item3:"طباعة تيشيرتات",
+item4:"طباعة كابات",
+item5:"والمزيد... تواصل معنا الآن!",
+facebook:"فيسبوك",
+whatsapp:"واتساب",
+instagram:"إنستجرام",
+footer:"صنع بـ ❤️ بواسطة هدايا مميزة"
+},
+fr:{
+title:"Hadaya Special",
+subtitle:"Votre destination cadeaux 🎁",
+item1:"Cadeaux personnalisés",
+item2:"Impression sur mugs",
+item3:"Impression sur t-shirts",
+item4:"Impression sur casquettes",
+item5:"Et plus encore...",
+facebook:"Facebook",
+whatsapp:"WhatsApp",
+instagram:"Instagram",
+footer:"Fait avec ❤️ par Hadaya Special"
+}
 };
 
-function setLang(lang) {
-    localStorage.setItem("lang", lang);
-
-    document.getElementById("title").innerText = langData[lang].title;
-    document.getElementById("subtitle").innerText = langData[lang].subtitle;
-    document.getElementById("item1").innerText = langData[lang].item1;
-    document.getElementById("item2").innerText = langData[lang].item2;
-    document.getElementById("item3").innerText = langData[lang].item3;
-    document.getElementById("item4").innerText = langData[lang].item4;
-    document.getElementById("item5").innerText = langData[lang].item5;
-
-    document.getElementById("facebook").innerText = langData[lang].facebook;
-    document.getElementById("whatsapp").innerText = langData[lang].whatsapp;
-    document.getElementById("channel").innerText = langData[lang].channel;
-    document.getElementById("instagram").innerText = langData[lang].instagram;
-
-    document.getElementById("footer").innerText = langData[lang].footer;
-
-    document.body.dir = (lang === "ar") ? "rtl" : "ltr";
+function setLang(lang){
+localStorage.setItem('lang',lang);
+for(let k in langData[lang]){
+const el=document.getElementById(k);
+if(el) el.innerText=langData[lang][k];
+}
+document.body.dir=lang==='ar'?'rtl':'ltr';
 }
 
-window.onload = () => {
-    const saved = localStorage.getItem("lang") || "en";
-    setLang(saved);
-};
+setLang(localStorage.getItem('lang')||'en');
 </script>
 
 </body>
